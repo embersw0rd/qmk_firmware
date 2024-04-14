@@ -100,7 +100,7 @@ bool rgb_matrix_indicators_user(void) {
 		rgb_matrix_set_color_all(0x8b, 0x00, 0x00);  // RGB dark red --- capslock color
     }
 	
-	if(host_keyboard_led_state().num_lock) {
+	if(!host_keyboard_led_state().num_lock) {
 		rgb_matrix_set_color_all(0xFF, 0xFF, 0x00);  // RGB yellow --- numlock color
 
 	}
