@@ -203,6 +203,7 @@ bool led_matrix_indicators_user(void) {
 }
 #endif
 
+/*
 #ifdef RGB_MATRIX_ENABLE
 bool rgb_matrix_indicators_user(void) {
     if (factory_reset_ind_state) {
@@ -228,6 +229,7 @@ bool rgb_matrix_indicators_user(void) {
     return true;
 }
 #endif
+*/
 
 void factory_reset_task(void) {
     if (factory_reset_timer) factory_timer_check();
@@ -325,7 +327,7 @@ void factory_test_rx(uint8_t *data, uint8_t length) {
     }
 }
 
-bool dip_switch_update_user(uint8_t index, bool active) {
+/*bool dip_switch_update_user(uint8_t index, bool active) {
     if (report_os_sw_state) {
 #ifdef INVERT_OS_SWITCH_STATE
         active = !active;
@@ -335,4 +337,4 @@ bool dip_switch_update_user(uint8_t index, bool active) {
     }
 
     return true;
-}
+}*/
